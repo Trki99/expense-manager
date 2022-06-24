@@ -33,13 +33,13 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
  - npm install => installing additional packages
  - npm run dev => compiling those packages
  - set database 
-   - CREATE DATABASE your_db_name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   - CREATE DATABASE your_db_name CHARACTER SET utf8mb4;
    - CREATE USER 'your_db_username'@'localhost' IDENTIFIED BY 'your_password';
    - GRANT ALL PRIVILEGES ON your_db_name.* TO 'your_db_username'@'localhost';
    - enter db name, user, password and server in your .env file
  - set your local environment 
-   - set vhost on your Apache (in httpd-vhost.conf file) for webshop.test, for example
-   - add webshop.test to your local host file (located in C:\Windows\System32\drivers\etc) - Notepad or whatever must be run with administrator privileges
+   - set vhost on your Apache (in httpd-vhost.conf file) for expense-manager.test, for example
+   - add expense-manager.test to your local host file (located in C:\Windows\System32\drivers\etc) - Notepad or whatever must be run with administrator privileges
  - php artisan optimize
  - php artisan migrate
 
