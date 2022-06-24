@@ -1,0 +1,33 @@
+/* header start */
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #fff;
+}
+
+.logout-button {
+    border: none;
+    background-color: #fff;
+    padding: 0;
+}
+
+.bi-person-circle {
+    color: #000;
+}
+
+#login {
+    color: #000;
+}
+
+#register {
+    color: #000;
+}
+
+/* header end */
+
+/* message modal start */
+
+#close-modal {
+    background-color: #007bff;
+}
+
+/* message modal end */
