@@ -27,38 +27,25 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## <u>Installation Steps</u>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+ - composer create-project laravel/laravel directory_name => Laravel installations
+ - npm install => installing additional packages
+ - npm run dev => compiling those packages
+ - set database 
+   - CREATE DATABASE your_db_name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   - CREATE USER 'your_db_username'@'localhost' IDENTIFIED BY 'your_password';
+   - GRANT ALL PRIVILEGES ON your_db_name.* TO 'your_db_username'@'localhost';
+   - enter db name, user, password and server in your .env file
+ - set your local environment 
+   - set vhost on your Apache (in httpd-vhost.conf file) for webshop.test, for example
+   - add webshop.test to your local host file (located in C:\Windows\System32\drivers\etc) - Notepad or whatever must be run with administrator privileges
+ - php artisan optimize
+ - php artisan migrate
 
-### Premium Partners
+## <u>Additional settings</u>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Debugbar => composer require barryvdh/laravel-debugbar --dev
+- Laravel Breeze, for basic auth stuff like login and registration => composer require laravel/breeze --dev
+- If there's an issue with "Syntax error or access violation: 1071 Specified key was too long" add <b>Schema::defaultStringLength(191)</b> to boot() method in app/Providers/AppServiceProvider.php
+  - Add also 'use Illuminate\Support\Facades\Schema;'
