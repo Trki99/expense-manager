@@ -24,11 +24,11 @@ class Category extends Model
     }
 
     public static function getCategoriesFromIncomeGroup( $user_id ) {
-        return self::where([ ['user_id', '=', $user_id], ['group', '=', 'Income'] ])->get();
+        return self::where([ ['user_id', '=', $user_id], ['group', '=', 'income'] ])->get();
     }
 
     public static function getCategoriesFromExpenseGroup( $user_id ) {
-        return self::where([ ['user_id', '=', $user_id], ['group', '=', 'Expense'] ])->get();
+        return self::where([ ['user_id', '=', $user_id], ['group', '=', 'expense'] ])->get();
     }
 
     public function updateCategory( $request ) {
